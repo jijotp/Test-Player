@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>562979295482-bknqb83paq3c42ctdj6qbqetrva76f4t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.562979295482-bknqb83paq3c42ctdj6qbqetrva76f4t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAagRRKZjWH9jwjUX9XbEgtrjjtiIPipZ0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>562979295482</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wac.inAppMessaging</string>
+	<key>PROJECT_ID</key>
+	<string>lulu-inapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lulu-inapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:562979295482:ios:115a290a39ff7b7130f943</string>
+	<key>DATABASE_URL</key>
+	<string>https://lulu-inapp.firebaseio.com</string>
+</dict>
+</plist>
