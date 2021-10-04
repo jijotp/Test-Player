@@ -84,8 +84,8 @@ extension FireStoreViewController: UIImagePickerControllerDelegate, UINavigation
         let backgroundImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
         let cropperViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CropperViewController") as! CropperViewController
         cropperViewController.image = backgroundImage
-        
-        self.navigationController?.pushViewController(cropperViewController, animated: true)
         picker.dismiss(animated: false, completion: nil)
+        self.navigationController?.pushViewController(cropperViewController, animated: true)
+        
     }
 }

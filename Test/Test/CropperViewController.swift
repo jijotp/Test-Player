@@ -135,7 +135,7 @@ class CropperViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
         
         // Programmatically initialization
         
@@ -214,6 +214,10 @@ class CropperViewController: UIViewController {
         
         cropView.delegate = self
         cropView.image = image
+        firstbutton1.isSelected = true
+        firstbutton2.isSelected = false
+        firstbutton3.isSelected = false
+        firstbutton4.isSelected = false
         cropView.showOverlayView(animationDuration: 0.3)
         
     }
@@ -326,8 +330,8 @@ extension UIImage {
         
         // Compute the new image size that preserves aspect ratio
         let scaledImageSize = CGSize(
-            width: size.width * scaleFactor,
-            height: size.height * scaleFactor
+            width: targetSize.width * 1,
+            height: targetSize.height * 1
         )
 
         // Draw and return the resized UIImage

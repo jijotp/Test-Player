@@ -731,18 +731,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRV-6P-5S4">
-                                <rect key="frame" x="0.0" y="492" width="414" height="404"/>
+                                <rect key="frame" x="0.0" y="517" width="414" height="252"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-3o-O29">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-ID-bpE">
-                                                <rect key="frame" x="18" y="0.0" width="378" height="268"/>
+                                                <rect key="frame" x="18" y="0.0" width="378" height="148"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY4-NI-VsZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="55"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="25"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="55" id="P2e-JA-sL7"/>
+                                                            <constraint firstAttribute="height" constant="25" id="P2e-JA-sL7"/>
                                                         </constraints>
                                                         <state key="normal" title="320 x 480"/>
                                                         <state key="selected">
@@ -753,9 +754,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOk-w1-4UL">
-                                                        <rect key="frame" x="0.0" y="71" width="378" height="55"/>
+                                                        <rect key="frame" x="0.0" y="41" width="378" height="25"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="55" id="CDO-kP-Pio"/>
+                                                            <constraint firstAttribute="height" constant="25" id="CDO-kP-Pio"/>
                                                         </constraints>
                                                         <state key="normal" title="300 x 400"/>
                                                         <state key="selected">
@@ -766,9 +768,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOE-Wm-udY">
-                                                        <rect key="frame" x="0.0" y="142" width="378" height="55"/>
+                                                        <rect key="frame" x="0.0" y="82" width="378" height="25"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="55" id="d8y-wl-FbR"/>
+                                                            <constraint firstAttribute="height" constant="25" id="d8y-wl-FbR"/>
                                                         </constraints>
                                                         <state key="normal" title="300 x 250"/>
                                                         <state key="selected">
@@ -779,9 +782,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zah-pp-f6H">
-                                                        <rect key="frame" x="0.0" y="213" width="378" height="55"/>
+                                                        <rect key="frame" x="0.0" y="123" width="378" height="25"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="55" id="I6Q-AV-aMV"/>
+                                                            <constraint firstAttribute="height" constant="25" id="I6Q-AV-aMV"/>
                                                         </constraints>
                                                         <state key="normal" title="320 x 50"/>
                                                         <state key="selected">
@@ -819,10 +823,13 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkj-lo-JlB">
                                 <rect key="frame" x="0.0" y="787" width="414" height="75"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.53333333329999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Hxb-vz-06Q"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Crop Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="cropAction:" destination="s2a-JL-VRb" eventType="touchUpInside" id="yrv-fc-s3O"/>
                                 </connections>
@@ -833,13 +840,13 @@
                         <constraints>
                             <constraint firstItem="hmz-Lm-GEP" firstAttribute="height" secondItem="A3h-nY-CaQ" secondAttribute="height" multiplier="0.5" id="05f-ym-6at"/>
                             <constraint firstItem="5XE-9e-T0G" firstAttribute="trailing" secondItem="hmz-Lm-GEP" secondAttribute="trailing" id="0cA-IZ-LAu"/>
-                            <constraint firstItem="fRV-6P-5S4" firstAttribute="top" secondItem="hmz-Lm-GEP" secondAttribute="bottom" id="5Ac-2D-hA7"/>
+                            <constraint firstItem="fRV-6P-5S4" firstAttribute="top" secondItem="hmz-Lm-GEP" secondAttribute="bottom" constant="25" id="5Ac-2D-hA7"/>
                             <constraint firstItem="fRV-6P-5S4" firstAttribute="leading" secondItem="A3h-nY-CaQ" secondAttribute="leading" id="A7D-34-HzT"/>
                             <constraint firstItem="hmz-Lm-GEP" firstAttribute="leading" secondItem="5XE-9e-T0G" secondAttribute="leading" id="JoK-5Q-Qv9"/>
                             <constraint firstItem="fRV-6P-5S4" firstAttribute="trailing" secondItem="5XE-9e-T0G" secondAttribute="trailing" id="Qzh-mA-Y8W"/>
+                            <constraint firstItem="Bkj-lo-JlB" firstAttribute="top" secondItem="fRV-6P-5S4" secondAttribute="bottom" constant="18" id="RKN-NG-0RR"/>
                             <constraint firstItem="5XE-9e-T0G" firstAttribute="trailing" secondItem="Bkj-lo-JlB" secondAttribute="trailing" id="TvL-Bz-zFF"/>
                             <constraint firstItem="5XE-9e-T0G" firstAttribute="top" secondItem="hmz-Lm-GEP" secondAttribute="top" id="pmW-5o-Cde"/>
-                            <constraint firstAttribute="bottom" secondItem="fRV-6P-5S4" secondAttribute="bottom" id="qI5-hY-RDa"/>
                             <constraint firstItem="Bkj-lo-JlB" firstAttribute="leading" secondItem="5XE-9e-T0G" secondAttribute="leading" id="w0S-PX-t9U"/>
                             <constraint firstItem="Bkj-lo-JlB" firstAttribute="bottom" secondItem="5XE-9e-T0G" secondAttribute="bottom" id="wrQ-DY-Ez6"/>
                         </constraints>
