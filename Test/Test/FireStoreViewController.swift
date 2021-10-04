@@ -60,5 +60,32 @@ class FireStoreViewController: UIViewController {
         }
         
     }
+    @IBAction func galleryAction() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum) {
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
     
+    
+}
+// MARK: - UIImagePickerControllerDelegate
+
+extension FireStoreViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let backgroundImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
+        let cropperViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CropperViewController") as! CropperViewController
+        cropperViewController.image = backgroundImage
+        
+        self.navigationController?.pushViewController(cropperViewController, animated: true)
+        picker.dismiss(animated: false, completion: nil)
+    }
 }

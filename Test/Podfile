@@ -9,5 +9,6 @@ target 'Test' do
 pod 'Firebase/Firestore'
 
 pod 'FirebaseFirestoreSwift'
+pod 'AKImageCropperView'
 
 end

@@ -10,6 +10,8 @@
 		694CEB80270AC544007C0001 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694CEB7F270AC544007C0001 /* ClassViewController.swift */; };
 		694CEBC5270AF82D007C0001 /* FireStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694CEBC1270AF756007C0001 /* FireStoreViewController.swift */; };
 		694CEBC8270AF84A007C0001 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 694CEBC7270AF84A007C0001 /* GoogleService-Info.plist */; };
+		694CEC48270B0C8A007C0001 /* CropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694CEC47270B0C8A007C0001 /* CropperViewController.swift */; };
+		694CEC4B270B18CD007C0001 /* ImgdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694CEC4A270B18CD007C0001 /* ImgdViewController.swift */; };
 		695DBD9B26F97F0700DABD4C /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DBD9926F97F0700DABD4C /* AddCollectionViewCell.swift */; };
 		695DBD9C26F97F0700DABD4C /* AddCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695DBD9A26F97F0700DABD4C /* AddCollectionViewCell.xib */; };
 		695DBDA026F97F1600DABD4C /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DBD9E26F97F1600DABD4C /* BottomCollectionViewCell.swift */; };
@@ -30,6 +32,8 @@
 		694CEB7F270AC544007C0001 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		694CEBC1270AF756007C0001 /* FireStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreViewController.swift; sourceTree = "<group>"; };
 		694CEBC7270AF84A007C0001 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		694CEC47270B0C8A007C0001 /* CropperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropperViewController.swift; sourceTree = "<group>"; };
+		694CEC4A270B18CD007C0001 /* ImgdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgdViewController.swift; sourceTree = "<group>"; };
 		695DBD9926F97F0700DABD4C /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
 		695DBD9A26F97F0700DABD4C /* AddCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCollectionViewCell.xib; sourceTree = "<group>"; };
 		695DBD9E26F97F1600DABD4C /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,11 +99,13 @@
 				69E72A6E26C9FD7D0050E971 /* ViewController.swift */,
 				694CEB7F270AC544007C0001 /* ClassViewController.swift */,
 				694CEBC1270AF756007C0001 /* FireStoreViewController.swift */,
+				694CEC47270B0C8A007C0001 /* CropperViewController.swift */,
 				69BC96E826F1C28200A1F0E2 /* happinessViewController.swift */,
 				695DBDC626F986F900DABD4C /* CollectionReusableView.swift */,
 				695DBD9E26F97F1600DABD4C /* BottomCollectionViewCell.swift */,
 				695DBD9F26F97F1600DABD4C /* BottomCollectionViewCell.xib */,
 				695DBD9926F97F0700DABD4C /* AddCollectionViewCell.swift */,
+				694CEC4A270B18CD007C0001 /* ImgdViewController.swift */,
 				695DBD9A26F97F0700DABD4C /* AddCollectionViewCell.xib */,
 				69E72A7026C9FD7D0050E971 /* Main.storyboard */,
 				69E72A7326C9FD7D0050E971 /* Assets.xcassets */,
@@ -239,9 +245,11 @@
 				694CEB80270AC544007C0001 /* ClassViewController.swift in Sources */,
 				694CEBC5270AF82D007C0001 /* FireStoreViewController.swift in Sources */,
 				69E72A6F26C9FD7D0050E971 /* ViewController.swift in Sources */,
+				694CEC48270B0C8A007C0001 /* CropperViewController.swift in Sources */,
 				695DBD9B26F97F0700DABD4C /* AddCollectionViewCell.swift in Sources */,
 				69E72A6B26C9FD7D0050E971 /* AppDelegate.swift in Sources */,
 				695DBDA026F97F1600DABD4C /* BottomCollectionViewCell.swift in Sources */,
+				694CEC4B270B18CD007C0001 /* ImgdViewController.swift in Sources */,
 				69BC96E926F1C28200A1F0E2 /* happinessViewController.swift in Sources */,
 				69E72A6D26C9FD7D0050E971 /* SceneDelegate.swift in Sources */,
 			);
