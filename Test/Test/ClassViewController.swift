@@ -10,37 +10,64 @@ import AVKit
 import AVFoundation
 
 class ClassViewController: UIViewController {
-
+    
     @IBOutlet weak var videoView: UIView!
+    var playerLayer = AVPlayerLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated:false)
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated:    animated)
+    }
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
-      }
+    }
     
-      override var shouldAutorotate: Bool {
-          return true
-      }
+    override var shouldAutorotate: Bool {
+        return true
+    }
     
-    override func viewDidLayoutSubviews()
-    {
+    override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
-        let videoURL = URL(string: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8")
+        
+        let videoURL = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")
+        if let maskLayer = self.view.layer.sublayers?.filter({$0.name == "masklayer"}).first {
+            maskLayer.removeFromSuperlayer()
+        }
+        
         let player = AVPlayer(url: videoURL!)
         let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
+        playerLayer.frame = self.view.frame
+        playerLayer.name = "masklayer"
         self.view.layer.addSublayer(playerLayer)
+        setGradientBackground()
         self.view.bringSubviewToFront(videoView)
+        playerLayer.videoGravity = .resize
         playerLayer.frame = view.bounds
         player.play()
-
+        
     }
-
+    
+    @IBAction func closeButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    func setGradientBackground() {
+        let colorBottom =  UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.76).cgColor
+        let colorTop = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.videoView.bounds
+        
+        self.videoView.layer.insertSublayer(gradientLayer, at:0)
+    }
 }
+

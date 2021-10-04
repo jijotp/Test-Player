@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
+        self.navigationController?.setNavigationBarHidden(false, animated:    animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
 
 
