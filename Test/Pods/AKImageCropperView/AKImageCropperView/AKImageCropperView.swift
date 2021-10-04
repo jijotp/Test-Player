@@ -730,8 +730,9 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
     
     //  MARK: - AKImageCropperOverlayViewDelegate
     
-    func cropperOverlayViewDidChangeCropRect(_ view: AKImageCropperOverlayView, _ cropRect: CGRect) {
-        
+    public func cropperOverlayViewDidChangeCropRect(_ view: AKImageCropperOverlayView, _ cropRect: CGRect) {
+        view.cropRect = cropRect
+        view.layoutSubviews()
         scrollView.contentInset = UIEdgeInsetsMake(
             cropRect.origin.y,
             cropRect.origin.x,
@@ -747,6 +748,9 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
             scrollView.zoomScale        *= fillScaleMultiplier
         }
     }
+    
+    
+    
     
     // MARK: - UIScrollViewDelegate
     

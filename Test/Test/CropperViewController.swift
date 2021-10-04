@@ -272,7 +272,10 @@ class CropperViewController: UIViewController {
         firstbutton2.isSelected = false
         firstbutton3.isSelected = false
         firstbutton4.isSelected = false
-        
+        if let over = cropView.overlayView {
+            let overCrop = cropView.overlayView?.cropRect ?? CGRect(x: 0.0, y: 0.0, width: 300.0, height: 400.0)
+            cropView.cropperOverlayViewDidChangeCropRect(over, CGRect(x: overCrop.minX, y: overCrop.minY, width: 320.0, height: 480.0))
+        }
     }
     
     @IBAction func secondAction(_ sender: Any) {
@@ -281,6 +284,10 @@ class CropperViewController: UIViewController {
         firstbutton2.isSelected = true
         firstbutton3.isSelected = false
         firstbutton4.isSelected = false
+        if let over = cropView.overlayView {
+            let overCrop = cropView.overlayView?.cropRect ?? CGRect(x: 0.0, y: 0.0, width: 300.0, height: 400.0)
+            cropView.cropperOverlayViewDidChangeCropRect(over, CGRect(x: overCrop.minX, y: overCrop.minY, width: 300.0, height: 400.0))
+        }
     }
     
     @IBAction func thrisAction(_ sender: Any) {
@@ -289,6 +296,10 @@ class CropperViewController: UIViewController {
         firstbutton2.isSelected = false
         firstbutton3.isSelected = true
         firstbutton4.isSelected = false
+        if let over = cropView.overlayView {
+            let overCrop = cropView.overlayView?.cropRect ?? CGRect(x: 0.0, y: 0.0, width: 300.0, height: 400.0)
+            cropView.cropperOverlayViewDidChangeCropRect(over, CGRect(x: overCrop.minX, y: overCrop.minY, width: 300.0, height: 250.0))
+        }
     }
     
     @IBAction func fourthAction(_ sender: Any) {
@@ -297,6 +308,10 @@ class CropperViewController: UIViewController {
         firstbutton2.isSelected = false
         firstbutton3.isSelected = false
         firstbutton4.isSelected = true
+        if let over = cropView.overlayView {
+            let overCrop = cropView.overlayView?.cropRect ?? CGRect(x: 0.0, y: 0.0, width: 300.0, height: 400.0)
+            cropView.cropperOverlayViewDidChangeCropRect(over, CGRect(x: overCrop.minX, y: ((overCrop.height / 2) - 50), width: 320.0, height: 50))
+        }
     }
     
     func pushedVC(ssImage: UIImage) {

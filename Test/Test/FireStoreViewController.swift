@@ -58,7 +58,6 @@ class FireStoreViewController: UIViewController {
                 }
             }
         }
-        
     }
     @IBAction func galleryAction() {
         

@@ -699,7 +699,6 @@
                                 </constraints>
                                 <state key="normal" title="Gallery"/>
                                 <connections>
-                                    <action selector="ShowAction:" destination="knX-Cp-eEy" eventType="touchUpInside" id="Ucp-c5-EZz"/>
                                     <action selector="galleryAction" destination="knX-Cp-eEy" eventType="touchUpInside" id="Z0I-re-AWr"/>
                                 </connections>
                             </button>

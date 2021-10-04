@@ -38,7 +38,7 @@ open class AKImageCropperOverlayView: UIView {
     
     /** Crop rectangle */
     
-    internal var cropRect: CGRect = .zero
+    public var cropRect: CGRect = .zero
     
     /** Saved crop rectangle state */
     
@@ -832,7 +832,7 @@ open class AKImageCropperOverlayView: UIView {
     // MARK: - Touches
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    
         guard let touch = touches.first else {  return }
         
         /* Save */
@@ -845,7 +845,6 @@ open class AKImageCropperOverlayView: UIView {
     }
     
     override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-  
         guard let touch = touches.first else { return }
 
         /* GET TRANSLATION POINT */
