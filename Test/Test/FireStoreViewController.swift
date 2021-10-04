@@ -25,8 +25,9 @@ class FireStoreViewController: UIViewController {
             //                return
             //              }
             for document in documentSnapshot!.documents {
-                print("\(document.documentID) => \(document.data())")
+                print("\(document.documentID) => \(document.documentID)")
             }
+            print("Document Count",documentSnapshot!.documents.count)
         }
     }
     @IBAction func addAction(_ sender: Any) {
