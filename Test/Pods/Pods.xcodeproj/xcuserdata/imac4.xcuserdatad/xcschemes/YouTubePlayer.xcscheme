@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4F2AA297E6D81200CABB4A6BF7DF1BA"
-               BuildableName = "AKImageCropperView.framework"
-               BlueprintName = "AKImageCropperView"
+               BlueprintIdentifier = "6273C43DC7FF94E93DBFF580DB584296"
+               BuildableName = "YouTubePlayer.framework"
+               BlueprintName = "YouTubePlayer"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

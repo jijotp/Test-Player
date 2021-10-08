@@ -8,9 +8,12 @@
 import UIKit
 import AVKit
 import AVFoundation
+import YouTubePlayer
+import YoutubePlayer_in_WKWebView
 
 class ClassViewController: UIViewController {
     
+    @IBOutlet weak var playerView: WKYTPlayerView!
     @IBOutlet weak var videoView: UIView!
     var playerLayer = AVPlayerLayer()
     
@@ -37,21 +40,16 @@ class ClassViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let videoURL = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")
-        if let maskLayer = self.view.layer.sublayers?.filter({$0.name == "masklayer"}).first {
-            maskLayer.removeFromSuperlayer()
-        }
+//        let myVideoURL = NSURL(string: "https://www.youtube.com/watch?v=nGj5qelzgUo")
+//        videoPlayer.loadVideoURL(myVideoURL! as URL)
+//        videoPlayer.addSubview(videoView)
+//        videoView.bringSubviewToFront(videoPlayer)
         
-        let player = AVPlayer(url: videoURL!)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.frame
-        playerLayer.name = "masklayer"
-        self.view.layer.addSublayer(playerLayer)
-        setGradientBackground()
-        self.view.bringSubviewToFront(videoView)
-        playerLayer.videoGravity = .resize
-        playerLayer.frame = view.bounds
-        player.play()
+        self.playerView.delegate = self
+        let playerVars = ["EngW7tLk6R8": 0]
+        playerView.load(withVideoId: "nGj5qelzgUo", playerVars: playerVars)
+        videoView.bringSubviewToFront(playerView)
+        playerView.layer.addSublayer(videoView.layer)
         
     }
     
@@ -71,3 +69,11 @@ class ClassViewController: UIViewController {
     }
 }
 
+extension ClassViewController: WKYTPlayerViewDelegate{
+    
+    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
+        self.playerView.playVideo()
+        
+    }
+    
+}

@@ -38,7 +38,8 @@ class FireStoreViewController: UIViewController {
             "first": "Alan",
             "middle": "Mathison",
             "last": "Turing",
-            "born": 1912
+            "born": 1912,
+            "timestamp": FieldValue.serverTimestamp()
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -82,7 +83,6 @@ extension FireStoreViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let backgroundImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
         let cropperViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CropperViewController") as! CropperViewController
-        cropperViewController.image = backgroundImage
         picker.dismiss(animated: false, completion: nil)
         self.navigationController?.pushViewController(cropperViewController, animated: true)
         

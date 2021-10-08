@@ -212,7 +212,6 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
-  - AKImageCropperView (2.0.0)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -284,16 +283,18 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - YouTubePlayer (0.7.2)
+  - YoutubePlayer-in-WKWebView (0.3.7)
 
 DEPENDENCIES:
-  - AKImageCropperView
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - YouTubePlayer
+  - YoutubePlayer-in-WKWebView (~> 0.3.0)
 
 SPEC REPOS:
   trunk:
     - abseil
-    - AKImageCropperView
     - BoringSSL-GRPC
     - Firebase
     - FirebaseCore
@@ -307,10 +308,11 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - YouTubePlayer
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
-  AKImageCropperView: 9c80fd45512daa69426161ad51c248655c1b5182
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
@@ -324,7 +326,9 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
+  YoutubePlayer-in-WKWebView: 795acdc5e27769cc647ad7f982dabc26050b47eb
 
-PODFILE CHECKSUM: 09cd61c09ae19c18cc900634fec4a196e24aa2a7
+PODFILE CHECKSUM: 1b70b7a2a8caf63ea2325d370ec9b48b244d23b0
 
 COCOAPODS: 1.10.1

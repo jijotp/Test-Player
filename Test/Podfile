@@ -7,8 +7,8 @@ target 'Test' do
 
   # Pods for Test
 pod 'Firebase/Firestore'
-
+pod 'YouTubePlayer'
 pod 'FirebaseFirestoreSwift'
-pod 'AKImageCropperView'
+pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
 
 end
